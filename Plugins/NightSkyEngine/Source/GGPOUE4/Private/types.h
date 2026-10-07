@@ -20,7 +20,9 @@
  *   4389 - '!=' : signed/unsigned mismatch
  *   4800 - 'int' : forcing value to bool 'true' or 'false' (performance warning)
  */
+#ifdef _MSC_VER
 #pragma warning(disable: 4018 4100 4127 4201 4389 4800)
+#endif
 
 /*
  * Simple types
@@ -32,7 +34,7 @@ typedef unsigned char byte;
  */
 #if defined(_WINDOWS)
 #  include "platform_windows.h"
-#elif defined(__APPLE__) or defined(__GNUC__)
+#elif defined(__APPLE__) || defined(__linux__)
 #  include "platform_unix.h"
 #else
 #  error Unsupported platform

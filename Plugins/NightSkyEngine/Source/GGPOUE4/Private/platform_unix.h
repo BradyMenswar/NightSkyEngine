@@ -5,11 +5,12 @@
  * in the LICENSE file.
  */
 
-#ifdef __linux__
+#if defined(__linux__) || defined(__APPLE__)
 
 #ifndef _GGPO_UNIX_H_
 #define _GGPO_UNIX_H_
 
+#include <stdint.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/time.h>
@@ -35,7 +36,9 @@
 #define WSAEWOULDBLOCK EWOULDBLOCK
 #define INFINITE (-1)
 #define WAIT_OBJECT_0 (0x00000000L)
+#ifndef FALSE
 #define FALSE (false)
+#endif
 #define MAX_PATH (4096)
 #define INVALID_SOCKET ((SOCKET)(~0))
 #define SOCKET_ERROR (-1)

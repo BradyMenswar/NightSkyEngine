@@ -2,7 +2,18 @@
 
 Night Sky Engine is a free and open source fighting game framework made in Unreal Engine 5. It is designed to be powerful yet easy to learn, and can be used to make 2D and 2.5D fighting games.
 
-It requires Unreal Engine 5.7. 
+It requires Unreal Engine 5.7.
+
+## macOS
+
+See [Mac build and run instructions](docs/mac.md) for prerequisites and toolchain troubleshooting.
+
+```bash
+bash Scripts/mac.sh build
+bash Scripts/mac.sh run
+```
+
+Set `UE_ROOT` if Unreal is not installed at `/Users/Shared/Epic Games/UE_5.7`.
 
 This branch is intended to target higher-end machines, such as consoles and high-end PCs. If you're looking for lower fidelity visuals, please use the `lowend` branch.
 

@@ -4,7 +4,7 @@
  * Use of this software is governed by the MIT license that can be found
  * in the LICENSE file.
  */
-#ifdef __linux__
+#if defined(__linux__) || defined(__APPLE__)
 
 #include "platform_unix.h"
 
